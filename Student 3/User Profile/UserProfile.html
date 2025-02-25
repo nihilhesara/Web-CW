@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User profile</title>
+    <link rel="stylesheet" href="UserProfile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--Naviation bar-->
+    <div class="banner">
+        <div class="navbar">
+            <ul>
+                <li><a href="../../Student 2/Home/Home.html">Home</a></li>
+                <li><a href="../../Student 4/Gallery/gallery.html">Gallery</a></li>
+                <li><a href="../../Student 1/Store/shop.html">Shop</a></li>
+                <li><a href="../../Student 3/Team/Team.html">About Us</a></li>
+                <li><a href="../../Student 4/Site map/sitemap.html">Site Map</a></li>
+                <li><a href="../../Student 3/User Profile/UserProfile.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Creating a custome prompt-->
+    <div id="customPrompt" class="modal">
+        <div class="modal-content">
+            <!--Creating and functioning the prompt closing x mark-->
+            <span class="close" onclick="closePrompt()">&times;</span>
+            <p>Please enter your details:</p>
+            
+            <!--Section - 01 questions-->
+            <div id="section1">
+                <div id="question1">
+                    <p>What is your name?</p>
+                    <input type="text" id="nameInput">
+                </div>
+                <div id="question2" style="display: none;">
+                    <p>What is your surname?</p>
+                    <input type="text" id="surnameInput">
+                </div>
+                <div id="question3" style="display: none;">
+                    <p>How old are you?</p>
+                    <input type="number" id="ageInput">
+                </div>
+                <div id="question4" style="display: none;">
+                    <p>Select your gender :</p>
+                    <select id="genderInput">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!--Section - 02 questions-->
+            <div id="section2" style="display: none;">
+                <div id="question5">
+                    <p>Address:</p>
+                    <input type="text" id="addressInput">
+                </div>
+                <div id="question6" style="display: none;">
+                    <p>Task:</p>
+                    <input type="text" id="taskInput">
+                </div>
+                <div id="question7" style="display: none;">
+                    <p>Place:</p>
+                    <input type="text" id="placeInput">
+                </div>
+                <div id="question8" style="display: none;">
+                    <p>Assignment Type:</p>
+                    <input type="text" id="assignmentType">
+                </div>
+            </div>
+            
+            <!--Section - 03 questions-->
+            <div id="section3" style="display: none;">
+                <div id="question9">
+                    <p>Which area did you study?</p>
+                    <input type="text" id="studyAreaInput">
+                </div>
+                <div id="question10" style="display: none;">
+                    <p>What is your highest degree?</p>
+                    <input type="text" id="degreeInput">
+                </div>
+                <div id="question11" style="display: none;">
+                    <p>What is your university / institution?</p>
+                    <input type="text" id="uniInput">
+                </div>
+                <div id="question12" style="display: none;">
+                    <p>What is your degree completion year?</p>
+                    <input type="text" id="cyearInput">
+                </div>
+            </div>
+            
+            <!--Section - 04 questions-->
+            <div id="section4" style="display: none;">
+                <div id="question13">
+                    <p>How many minimum hours per week do you work?</p>
+                    <input type="text" id="minHoursInput">
+                </div>
+                <div id="question14" style="display: none;">
+                    <p>What is your surname?</p>
+                    <input type="text" id="surname2Input">
+                </div>
+                <div id="question15" style="display: none;">
+                    <p>What is your telephone number?</p>
+                    <input type="text" id="telInput">
+                </div>
+                <div id="question16" style="display: none;">
+                    <p>What is your email?</p>
+                    <input type="text" id="emailInput">
+                </div>
+            </div>
+            
+            <!--onclick function to every button-->
+            <button onclick="nextQuestion()" id="btn">Next</button>
+            <button onclick="skipSection()" id="btn">Skip</button>
+            <button onclick="submitDetails()" id="btn">Submit</button>
+        </div>
+    </div>
+
+    <!--Creating a rogress bar-->
+    <div id="progress_bar">
+        <div id="progress"></div>
+    </div>
+
+    <script src="UserProfile.js"></script>
+
+<script>
+    // Automatically opens the prompt message 
+    openPrompt(); 
+</script>
+
+<!--footer-->
+<footer>
+    <div class="footer-container ">
+        <h3><b>Health Plus</b></h3>
+        <p>
+            "Welcome to our Health website! Discover insights into Global Health.
+                    For any questions or <a href="../../Student 2/Feedback/Feedback.html">feedback</a>, please feel free to reach out to us."
+        </p>
+        <ul class="icons">
+            <li><a href="https://www.facebook.com "><i class="fa fa-facebook "></i></a></li>
+            <li><a href="https://www.instagram.com "><i class="fa fa-instagram "></i></a></li>
+            <li><a href="https://mobile.twitter.com "><i class="fa fa-twitter "></i></a></li>
+            <li><a href="https://chat.whatsapp.com "><i class="fa fa-whatsapp "></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom ">
+        <p>Copyright&copy; 2024 Health Plus. designed by  <a href="../../Editors/Page Editor 3.html">@Nihil Rupasinghe</a></p>
+
+    </div>
+</footer>
+    
+</body>
+</html>
