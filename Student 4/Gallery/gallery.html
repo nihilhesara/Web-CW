@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Wellbeing Gallery.</title>
+    <link rel="stylesheet" href="gallerystyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+  </head>
+  <body>
+    <!--Navigation Bar-->
+    <nav>
+      <div class="banner">
+        <div class="navbar">
+          <ul>
+            <li><a href="../../Student 2/Home/Home.html">Home</a></li>
+            <li><a href="../../Student 4/Gallery/gallery.html">Gallery</a></li>
+            <li><a href="../../Student 1/Store/shop.html">Shop</a></li>
+            <li><a href="../../Student 3/Team/Team.html">About Us</a></li>
+            <li><a href="../../Student 4/Site map/sitemap.html">Site Map</a></li>
+            <li><a href="../../Student 3/User Profile/UserProfile.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <h1>Natural Health Portfolio</h1>
+    </header>
+
+    <!--Cuztomization buttons-->
+    <div class="fontsize">
+      <button id="font-size-down">
+        <span id="font-size-small">Aa</span>
+      </button>
+      <button id="font-size-reset">
+        <span id="font-size-medium">Aa</span>
+      </button>
+      <button id="font-size-up">
+        <span id="font-size-large">Aa</span>
+      </button>
+    </div>
+    <div class="back-colors">
+      <button id="light-mode"><i class="bi bi-brightness-high"></i></button>
+      <button id="dark-mode"><i class="bi bi-moon"></i></button>
+    </div>
+
+    <!--Start of Slider-->
+    <div class="container-slider1">
+      <div class="slider">
+        <div class="slide active">
+          <img src="Images/HealthyFood(1).png" alt="Healthy food">
+          <div class="info">
+            <h2>Nutrition Nexus.</h2>
+            <br>
+            <p>
+              Discover the transformative power of healthy eating. Dive into a world of nutritious foods, vibrant flavors, and holistic wellness guidance. Elevate your well-being with every bite. <a href="#food">learn more.</a> </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="Images/hydration(1).png" alt="Drinking water">
+          <div class="info">
+            <h2>Hydration Haven.</h2>
+            <br>
+            <p>Unlock the essence of vitality with the elixir of life: water. Immerse yourself in the purity and rejuvenation of hydration. Quench your body's thirst for health and vitality, sip by sip. Experience the refreshing journey towards optimal well-being through the simple act of drinking water. <a href="#water">learn more.</a></p>
+        </div>
+        </div>
+        <div class="slide">
+          <img src="Images/outdooractivities(1).jpg" alt="Outdoor activities">
+          <div class="info">
+            <h2>Out Door Action.</h2>
+            <br>
+            <p>Where fun meets fitness, and adventure awaits at every turn. Experience the thrill of movement, the joy of play, and the camaraderie of shared experiences in the great outdoors. <a href="#outdoor">learn more</a></p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="Images/sleep-1152x578.jpg" alt="Sleep">
+          <div class="info">
+            <h2>Rest Right.</h2>
+            <br>
+            <p>Where the symphony of slumber meets the art of rejuvenation. Dive into a sanctuary of serenity, where each breath whispers tranquility and every moment unfolds in a delicate dance of relaxation. Embrace the rhythm of restfulness, as your dreams take flight on the wings of tranquility. It's more than sleep, it's a journey to restore, revive, and awaken refreshed, ready to conquer the dawn anew. <a href="#sleep">learn more</a></p>
+          </div>
+        </div>
+        <div class="navigation">
+          <button class="prev-btn" onclick="nextButton()">&lt;</button>
+          <button class="next-btn" onclick="prevButton()">&gt;</button>
+        </div>
+        <div class="navigation-visibility">
+          <div class="slide-icon active"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+        </div>
+      </div>
+    </div>
+    <!--Start of Gallery-->
+    <div class="container">
+      <div class="topic-header">
+        <h1 id="food">
+          Healthy Food.
+        </h1>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="image-container-food">
+        <div class="gallery-item">
+          <img src="Images/Balanced_Diet.jpeg" alt="Balanced Diet" data-caption="<h2>Healthy Diets.</h2> <br><br> <p>Also known as a symphony of wholesome flavors and nourishing ingredients. Discover the art of healthy eating, where each bite fuels your well-being and ignites your zest for life. Savor the journey towards optimal health with every nutritious choice.">
+        </div>
+        <div class="gallery-item">
+          <img src="Images/healthy_snack(1).jpg" alt="Healthy Snack" data-caption="<h2>Nutritious Joy.</h2> <br><br> <p>A realm where flavor meets nourishment, and every bite is a celebration of wellness. Explore the art of mindful munching, indulging in snacks that ignite your energy and uplift your spirits. Join us on a journey of wholesome delights, where each snack is a testament to your vibrant well-being.">
+        </div>
+        <div class="gallery-item">
+          <img src="Images/eatinghabbits(1).jpg" alt="Eating Habbits" data-caption="<h2>Habbits.</h2> <br><br> <p>Path to wellness where every bite nourishes and energizes. Cultivate balanced habits that honor your health and vitality. Join us in savoring the art of conscious consumption.">
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="topic-header">
+        <h1 id="water">
+          Drinking Water.
+        </h1>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="image-container-food">
+        <div class="gallery-item">
+          <img src="Images/drinkingwater(1).jpg" alt="Drinking Water" data-caption="<h2>Hydro Boost.</h2> <br><br> <p>A refreshing surge of vitality captured in a single drop. Feel the rejuvenating power of hydration as it quenches your thirst and revitalizes your senses. Embrace the invigorating essence of water, igniting a wave of energy that revitalizes your body and soul.</p>">
+        </div>
+        <div class="gallery-item">
+          <img src="Images/naturalstream(1).jpg" alt="Natural Stream" data-caption="<h2>Aqua Essence.</h2> <br><br> <p>Delve into the serene depths of water's pure essence, where tranquility meets rejuvenation. Allow its gentle embrace to wash over you, awakening your senses and revitalizing your spirit with each soothing ripple.">
+        </div>
+        <div class="gallery-item">
+          <img src="Images/waterislife(1).jpg" alt="Water powers life" data-caption="<h2>Hydro Health.</h2> <br><br> <p>Immerse yourself in the invigorating embrace of water's vitality. Experience its rejuvenating touch as it nourishes body and mind, promoting wellness and vitality with each hydrating moment.</p>">
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="topic-header">
+        <h1 id="outdoor">
+          Out Door Activities.
+        </h1>
+        <br>
+        <br>
+        <br>
+        <div class="image-container-food">
+          <div class="gallery-item">
+            <img src="Images/fittness.jpg" alt="Running" data-caption="<h2>Fit Fusion.</h2> <br><br> <p>Where strength meets grace in a symphony of motion. Witness the convergence of fitness and finesse, as bodies sculpt and minds ignite in harmony.</p>">
+          </div>
+          <div class="gallery-item">
+            <img src="Images/immersion.jpg" alt="Wandering" data-caption="<h2>Wild Wonder.</h2> <br><br> <p>Embark on a journey through nature's untamed beauty, where every step unveils a new adventure. Immerse yourself in the vastness of the wilderness, embracing the awe-inspiring wonders of the natural world.">
+          </div>
+          <div class="gallery-item">
+            <img src="Images/awareness.png" alt="Protecting Nature" data-caption="<h2>Green Insight.</h2> <br><br> <p>Offering a profound understanding of environmental harmony, fostering a deep connection to our natural world. Inspiring mindful action towards preserving Earth's precious ecosystems for generations to come.">
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="topic-header">
+        <h1 id="sleep">
+          Rest and Sleep.
+        </h1>
+        <br>
+        <br>
+        <br>
+        <div class="image-container-food">
+          <div class="gallery-item">
+            <img src="Images/cozybed(1).jpg" alt="Cozy Bed" data-caption="<h2>Zen Haven.</h2> <br><br> <p>Your ticket to effortless sleep. With its tranquil ambiance and cozy comforts, this space is tailored to make bedtime a breeze, ensuring you drift off into dreamland with ease.</p>">
+          </div>
+          <div class="gallery-item">
+            <img src="Images/routine.jpg" alt="Waking up to Alarm" data-caption="<h2>SleepEase</h2> <br><br> <p>Your roadmap to better sleep and brighter days. Simplify bedtime with calming cues and soothing steps for a peaceful slumber and refreshed mornings.">
+          </div>
+          <div class="gallery-item">
+            <img src="Images/digidetox.jpeg" alt="Digital Detox" data-caption="<h2>Tech Timeout.</h2> <br><br> <p>Unplug and unwind in this digital escape. Step away from screens to rediscover the beauty of the analog world. It's a retreat for the senses, where the only notifications are birdsong and the rustle of leaves.">
+          </div>
+        </div>
+
+        <div class="image-overlay">
+          <span class="popup-close">&times;</span>
+          <div class="popup-content">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="BIG IMAGE">
+            <div class="popup-caption"></div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>  
+
+    <!--Footer-->
+    <footer>
+      <div class="footer-container ">
+        <h3><b>Health Plus</b></h3>
+        <p>
+          "Welcome to our Health website! Discover insights into Healthy foods, fitness, yoga, and Music.
+          For any questions or feedback, please feel free to reach out to us."
+        </p>
+        <ul class="icons">
+          <li><a href="https://www.facebook.com "><i class="fa fa-facebook "></i></a></li>
+          <li><a href="https://www.instagram.com "><i class="fa fa-instagram "></i></a></li>
+          <li><a href="https://mobile.twitter.com "><i class="fa fa-twitter "></i></a></li>
+          <li><a href="https://chat.whatsapp.com "><i class="fa fa-whatsapp "></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom ">
+        <p>Copyright&copy; 2024 Health Plus. designed by  <a href="../../Editors/Page Editor 4.html">@Chamodh Wijayawardhana</a></p>
+
+      </div>
+    </footer>
+
+    <script src="gallerysscript.js"></script>  
+  </body>
+</html>
+      

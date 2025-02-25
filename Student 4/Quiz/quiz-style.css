@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:#eef8f7 ;
+}
+
+.app{
+    background: #fff;
+    width: 60%;
+    height: 100%;
+    max-width: 700px;
+
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.app h1{
+    font-size: 45px;
+    font-family: "Fira Sans", sans-serif;
+    color: black;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+
+.quiz{
+    padding: 20px 0;
+}
+
+.quiz h2{
+    font-size: 20px;
+    font-family: "Noto Sans", sans-serif;
+    color: black;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.btn{
+    display: flex;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    width: 40%;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover:not([disabled]){
+    background-color: #26d8b1;
+    color: #000000;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+
+#next-btn{
+    background-color: rgb(140, 235, 203);
+    color: #000000;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.correct{
+    background: rgb(145, 255, 145);
+}
+
+.incorrect{
+    background: rgb(241, 137, 137);
+}
+
+
+footer {
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #009688;
+  height: auto;
+  width: 100%;
+  font-family: "open sans";
+  padding-top: 10px;
+  margin-top: 3px;
+  color: #ffffff;
+  }
+  
+  
+  .footer-container h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 2rem;
+    margin: 15px 0px 10px 0;
+  }
+  
+  .footer-container p {
+    text-align: center;
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  .icons{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 2rem 0;
+  }
+  
+  .icons li {
+    margin: 0 10px;
+  }
+  
+  .icons a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+  }
+  
+  
+  .icons a:hover i {
+    color: rgba(0, 255, 255, 0.753);
+    transform: scale(1.5);
+  }
+  
+  .footer-bottom {
+    background-color: #096960;
+    width: 100%;
+    padding: 15px 0px;
+    text-align: center;
+    text-decoration-color: #fcfcfc;
+  }
+  
+  .footer-bottom p {
+    font-size: 15px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff;
+    font-family: "open sans";
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .footer-bottom a:hover {
+    color: rgba(0, 255, 255, 0.753);
+  }
+  
+  
+  .navbar {
+    width: 100%;
+    margin: auto ;
+    padding: 50px 2px; /* Adjusted padding */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    background-color: #009688;
+  }
+  
+  .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 12px; /* Adjusted margin */
+    position: relative;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+  }
+  
+  .navbar ul li:hover::after {
+    width: 100%;
+  }
+  
+  
+  @keyframes slideInTopToBottom {
+    from{
+      transform: translateY(-300px);
+    }
+    to{
+      transform: translateY(0);
+    }
+  }
+  
