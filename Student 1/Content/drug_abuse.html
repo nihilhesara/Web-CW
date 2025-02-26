@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        }
+
+        Body{
+            background-color: #eef8f7;
+        }
+
+        .banner {
+            width: 100%;
+            height: 35vh;
+            background-image: linear-gradient(rgba(71, 70, 70, 0.418), rgba(14, 12, 12, 0.5)), url(../Content/liquor.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .navbar {
+            width: 98%;
+            margin: auto ;
+            padding: 50px 2px; /* Adjusted padding */
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; 
+        }
+
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 12px; /* Adjusted margin */
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0%;
+            background: #009688;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+
+
+        @keyframes slideInTopToBottom {
+            from {
+                transform: translateY(-300px);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        hr {
+            border-top: 1px solid rgb(0, 0, 0);
+            margin: 10px 300px;
+        }
+
+        .row {
+            display: grid;
+            grid-gap: 1rem;
+            width: auto;
+            margin-left: 140px;
+            margin-top: 25px;
+            margin-right: 140px;
+            grid-gap: 2rem;
+            text-align: justify;
+            line-height: 22px;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            font-family: "Raleway";
+        }
+
+        .article{
+            font-size: 17px;
+        }
+        footer {
+            position: relative;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            background-color: #009688;
+            height: auto;
+            width: 100%;
+            font-family: "open sans";
+            padding-top: 10px;
+            margin-top: 0px;
+            color: #ffffff;
+        }
+
+
+        .footer-container h3 {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            line-height: 2rem;
+            margin: 15px 0px 10px 0;
+        }
+
+        .footer-container p {
+            text-align: center;
+            max-width: 500px;
+            margin: 10px auto;
+            line-height: 20px;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        .icons{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0 2rem 0;
+        }
+
+        .icons li {
+            margin: 0 10px;
+        }
+
+        .icons a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.3rem;
+        }
+
+
+        .icons a:hover i {
+            color: rgba(0, 255, 255, 0.753);
+            transform: scale(1.5);
+        }
+
+        .footer-bottom {
+            background-color: #096960;
+            width: 100%;
+            padding: 15px 0px;
+            text-align: center;
+            text-decoration-color: #fcfcfc;
+        }
+
+        .footer-bottom p {
+            font-size: 15px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+            text-decoration: none;
+            color: #fff;
+            font-family: "open sans";
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .footer-bottom a:hover {
+            color: rgba(0, 255, 255, 0.753);
+        }
+
+    </style>
+
+
+</head>
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <ul>
+                    <li><a href="../../Student 2/Home/Home.html">Home</a></li>
+                    <li><a href="../../Student 4/Gallery/gallery.html">Gallery</a></li>
+                    <li><a href="../../Student 1/Store/shop.html">Shop</a></li>
+                    <li><a href="../../Student 3/Team/Team.html">About Us</a></li>
+                    <li><a href="../../Student 4/Site map/sitemap.html">Site Map</a></li>
+                    <li><a href="../../Student 3/User Profile/UserProfile.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <section><br>
+            <h1>
+               Combatting Substance Abuse: Strengthening Prevention and Treatment</h1>
+            <hr><br>
+            <div class="row">
+                <div class="col">
+    
+                    <article class="article">
+                        <span style=" font-size: 30px;"></span>Substance abuse, including the misuse of narcotic drugs and harmful alcohol consumption, poses a significant threat to individuals, families, and communities worldwide. Addressing this issue requires a multifaceted approach that focuses on prevention, early intervention, and effective treatment strategies. By strengthening efforts in these areas, we can mitigate the devastating impact of substance abuse and promote healthier societies.<br><br><br>
+
+                        <h2>Prevention: Educating and Empowering Individuals</h2><br>
+                        Prevention plays a crucial role in reducing the prevalence of substance abuse. Educating individuals, particularly adolescents and young adults, about the risks associated with drug and alcohol use is essential. School-based prevention programs, community outreach initiatives, and public awareness campaigns can provide valuable information about the dangers of substance abuse and equip individuals with the skills to make informed decisions.
+                        
+                        Furthermore, promoting positive alternatives and healthy coping mechanisms can help prevent substance abuse before it begins. Encouraging participation in recreational activities, sports, arts, and community service can foster a sense of belonging and purpose, reducing the likelihood of individuals turning to drugs or alcohol as a means of escape.<br><br><br>
+                        
+                        <h2>Early Intervention: Identifying At-Risk Individuals</h2><br>
+                        Early intervention is key to addressing substance abuse before it escalates into a more severe problem. Identifying at-risk individuals and providing them with timely support and resources can prevent the progression of substance abuse disorders.
+                        
+                        Healthcare professionals, educators, and community leaders play a critical role in recognizing the warning signs of substance abuse and intervening promptly. Screening tools, counseling services, and access to mental health professionals can facilitate early detection and intervention efforts.<br><br><br>
+                        
+                        <h2>Treatment: Accessible and Comprehensive Care</h2><br>
+                        Effective treatment is essential for individuals struggling with substance abuse disorders to achieve recovery and regain control of their lives. Accessible and comprehensive treatment options, including behavioral therapies, medication-assisted treatment, and peer support programs, are vital components of a robust treatment system.
+                        
+                        Ensuring that treatment services are readily available and tailored to meet the diverse needs of individuals is crucial. Removing barriers to treatment, such as stigma, affordability, and lack of access to healthcare, can facilitate engagement and retention in care.<br><br><br>
+                        
+                        <h2>Conclusion: A Collaborative Effort for Positive Change</h2><br>
+                    
+                        
+                        In conclusion, strengthening the prevention and treatment of substance abuse, including narcotic drug abuse and harmful alcohol use, requires a concerted effort from policymakers, healthcare providers, educators, community organizations, and individuals alike. By prioritizing prevention, early intervention, and accessible treatment options, we can combat the scourge of substance abuse and build healthier, more resilient communities.
+
+                        Together, let us work towards a future where substance abuse is no longer a barrier to individual well-being and societal progress. Through collective action and unwavering commitment, we can create positive change and empower individuals to lead fulfilling, substance-free lives.
+                        <br><br><br>
+                    </article>
+                    
+                    
+
+
+                    
+                       
+                            <br><br><br>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-container ">
+                <h3><b>Health Plus</b></h3>
+                <p>
+                    "Welcome to our Health website! Discover insights into Global Health.
+                    For any questions or <a href="../../Student 2/Feedback/Feedback.html">feedback</a>, please feel free to reach out to us."
+                </p>
+                <ul class="icons">
+                    <li><a href="https://www.facebook.com "><i class="fa fa-facebook "></i></a></li>
+                    <li><a href="https://www.instagram.com "><i class="fa fa-instagram "></i></a></li>
+                    <li><a href="https://mobile.twitter.com "><i class="fa fa-twitter "></i></a></li>
+                    <li><a href="https://chat.whatsapp.com "><i class="fa fa-whatsapp "></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom ">
+                <p>Copyright&copy; 2024 Health Plus. designed by <a href="../../Editors/pageeditor_eshan.html">@Eshan Wijerathna</a></p>
+    
+            </div>
+        </footer>
+    
+</body>
+</html>

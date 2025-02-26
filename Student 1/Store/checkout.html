@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="stylescheckout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+
+    <nav>
+        <div class="banner">
+          <div class="navbar">
+             <ul>
+                <li><a href="../../Student 2/Home/Home.html">Home</a></li>
+                <li><a href="../../Student 4/Gallery/gallery.html">Gallery</a></li>
+                <li><a href="../../Student 1/Store/shop.html">Shop</a></li>
+                <li><a href="../../Student 3/Team/Team.html">About Us</a></li>
+                <li><a href="../../Student 4/Site map/sitemap.html">Site Map</a></li>
+                <li><a href="../../Student 3/User Profile/UserProfile.html">Login</a></li>
+             </ul>
+          </div>
+      </div>
+    </nav>
+    
+</head>
+<body>
+  <h1 class="checkout-heading">Checkout</h1><br>
+
+<form id="checkout-form"> <!-- Added an ID to the form for easy selection -->
+    <!-- Personal Details Section -->
+    <fieldset>
+        <legend>Personal Details</legend>
+        <div class="form-field">
+            <label class="required" for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" required>
+        </div>
+        <div class="form-field">
+            <label class="required" for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" required>
+        </div>
+        <div class="form-field">
+            <label class="required" for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+    </fieldset>
+
+    <!-- Address Details Section -->
+    <fieldset>
+        <legend>Address Details</legend>
+        <div class="form-field">
+            <label class="required" for="address1">Address Line 1</label>
+            <input type="text" id="address1" name="address1" required>
+        </div>
+        <div class="form-field">
+            <label for="address2">Address Line 2</label>
+            <input type="text" id="address2" name="address2">
+        </div>
+        <div class="form-field">
+            <label class="required" for="zipcode">Zip Code</label>
+            <input type="number" id="zipcode" name="zipcode" required>
+        </div>
+        <div class="form-field">
+            <label class="required" for="country">Country</label>
+            <input type="text" id="country" name="country" required>
+        </div>
+    </fieldset>
+
+    <!-- Payment Details Section -->
+    <fieldset>
+        <legend>Payment Details</legend>
+        <div class="form-field">
+            <label class="required" for="cardnumber">Card Number</label>
+            <input type="number" id="cardnumber" name="cardnumber" required>
+        </div>
+        <div class="form-field">
+            <label class="required" for="cardname">Name on Card</label>
+            <input type="text" id="cardname" name="cardname" required>
+        </div>
+        <div class="form-field">
+            <label class="required" for="expiredate">Expire Date</label>
+            <input type="month" id="expiredate" name="expiredate" required>
+        </div>
+        <div class="form-field">
+            <label class="required" for="cvv">CVV</label>
+            <input type="number" id="cvv" name="cvv" required>
+        </div>
+    </fieldset>
+
+    <!-- Buttons Section -->
+    <div class="form-buttons">
+      <button type="button" id="back-btn">Back to Store</button>
+      <button type="submit" id="submit-btn">Proceed to Payment</button>
+  </div>
+  
+</form>
+
+<!-- Basket Summary Section -->
+<fieldset class="Basket-summary">
+    <legend>Basket Summary</legend>
+    <div class="Basket-content">
+        <!-- Basket items will be dynamically populated here -->
+    </div>
+    <!-- Add field for shipping charges -->
+    <div class="shipping-charges">
+        <label for="shipping">Shipping Charges:</label>
+        <span id="shipping-charge">$50</span>
+    </div>
+    <!-- Add field for total -->
+    <div class="total">
+        <label for="total">Total:</label>
+        <span id="total-price"></span>
+    </div>
+</fieldset>
+
+<script src="store.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const BasketContent = document.querySelector('.Basket-content');
+    const totalElement = document.querySelector('#total-price');
+    let itemsAdded = JSON.parse(localStorage.getItem('BasketItems')) || [];
+    let total = 0;
+    
+    itemsAdded.forEach(item => {
+        const { title, price, imgSrc, color, quantity } = item;
+        total += parseFloat(price.replace('$', ''))*quantity;
+        BasketContent.innerHTML += BasketBoxComponent(title, price, imgSrc, color, quantity);
+    });
+    
+    total += 50;
+    totalElement.textContent = '$' + total.toFixed(2);
+    
+    const form = document.getElementById('checkout-form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        alert('Purchase successful!'); // Display success message
+        localStorage.removeItem('BasketItems'); // Clear Basket items from local storage
+        // Redirect to checkout success page or any other desired action
+        // window.location.href = 'checkout_success.html';
+    });
+    
+    const backButton = document.getElementById('back-btn');
+    backButton.addEventListener('click', function() {
+        // Redirect to shop.html
+        window.location.href = 'shop.html';
+    });
+    
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        
+        const expireDateInput = document.getElementById('expiredate');
+        const expireDateValue = expireDateInput.value;
+
+        const dateRegex = /^\d{4}-(0[1-9]|1[0-2])$/;
+        if (!dateRegex.test(expireDateValue)) {
+            alert('Please enter a valid expiration date in the format YYYY-MM.');
+            return;
+        }
+
+        
+        localStorage.removeItem('BasketItems');
+        // window.location.href = 'checkout_success.html';
+    });
+});
+
+function BasketBoxComponent(title, price, imgSrc, color, quantity) {
+    return `
+    <div class="Basket-box">
+        <img src="${imgSrc}" alt="" class="Basket-img">
+        <div class="detail-box">
+            <div class="Basket-product-name">${title}</div>
+            <div class="Basket-color">Color: ${color}</div>
+            <div class="Basket-price">${price}</div>
+            <div class="Basket-quantity">Quantity: ${quantity}</div>
+        </div>
+    </div>`;
+}
+
+
+
+</script>
+
+</body>
+
+<footer>
+    <div class="footer-container ">
+        <h3><b>Health Plus</b></h3>
+        <p>
+            "Welcome to our Health website! Discover insights into Global Health.
+            For any questions or <a href="../../Student 2/Feedback/Feedback.html">feedback</a>, please feel free to reach out to us."
+        </p>
+        <ul class="icons">
+            <li><a href="https://www.facebook.com "><i class="fa fa-facebook "></i></a></li>
+            <li><a href="https://www.instagram.com "><i class="fa fa-instagram "></i></a></li>
+            <li><a href="https://mobile.twitter.com "><i class="fa fa-twitter "></i></a></li>
+            <li><a href="https://chat.whatsapp.com "><i class="fa fa-whatsapp "></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom ">
+        <p>Copyright&copy; 2023 Health Plus. designed by  <a href="../../Editors/pageeditor_eshan.html">@Eshan Wijerathna</a></p>
+
+    </div>
+</footer>
+
+</html>
